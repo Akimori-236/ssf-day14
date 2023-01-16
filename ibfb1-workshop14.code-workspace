@@ -1,0 +1,27 @@
+{
+    "folders": [
+        {
+            "path": "../../../Users/wee_seng/Documents/NUS-ISS/ibfb1-workshop14"
+        },
+        {
+            "path": "."
+        },
+        {
+            "path": "../ssf-workshop14"
+        },
+        {
+            "path": "../SLIDES"
+        },
+        {
+            "path": "../ssf-workshop13"
+        },
+        {
+            "name": "vttp2022b2-workshop13",
+            "path": "../../../Users/wee_seng/Documents/NUS-ISS/vttp2022b2-workshop13"
+        }
+    ],
+    "settings": {
+        "java.configuration.updateBuildConfiguration": "interactive",
+        "java.compile.nullAnalysis.mode": "automatic"
+    }
+}
