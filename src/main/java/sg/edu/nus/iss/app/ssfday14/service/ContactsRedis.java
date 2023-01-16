@@ -17,6 +17,8 @@ public class ContactsRedis {
         @Autowired
         RedisTemplate<String, Object> redisTemplate;
 
+        // methods for the controller to use
+
         public void save(final Contact ctc) {
                 redisTemplate.opsForList()
                                 .leftPush(CONTACT_ENTITY, ctc.getId());
@@ -26,8 +28,7 @@ public class ContactsRedis {
 
         public Contact findById(final String contactId) {
                 Contact result = (Contact) redisTemplate.opsForHash()
-                                .get(CONTACT_ENTITY + "_Map",
-                                                contactId);
+                                .get(CONTACT_ENTITY + "_Map", contactId);
                 return result;
         }
 
@@ -40,7 +41,6 @@ public class ContactsRedis {
                                 .filter(Contact.class::isInstance)
                                 .map(Contact.class::cast)
                                 .toList();
-
                 return ctcs;
         }
 
