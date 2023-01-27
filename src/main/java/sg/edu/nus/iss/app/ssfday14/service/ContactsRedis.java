@@ -20,8 +20,10 @@ public class ContactsRedis {
         // methods for the controller to use
 
         public void save(final Contact ctc) {
+                // store in main library the id
                 redisTemplate.opsForList()
                                 .leftPush(CONTACT_ENTITY, ctc.getId());
+                // store in main map library the key-id and value-object
                 redisTemplate.opsForHash()
                                 .put(CONTACT_ENTITY + "_Map", ctc.getId(), ctc);
         }
